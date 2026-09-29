@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Mail, MapPin, Phone } from "lucide-react"
+import { Mail, Phone } from "lucide-react"
 import { NAVIGATION } from "@/lib/constants"
 import { brand, products } from "@/lib/site-data"
 

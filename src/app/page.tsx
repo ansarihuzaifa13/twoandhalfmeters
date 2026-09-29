@@ -1,52 +1,8 @@
 import Link from "next/link"
-import { ArrowRight, MessageCircle } from "lucide-react"
-import { brand, journalPosts, products, story, trustPoints } from "@/lib/site-data"
-
-function ProductCard({ product }: { product: (typeof products)[number] }) {
-  return (
-    <article className="group h-full overflow-hidden rounded-[2px] border border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(0,0,0,0.06)]">
-      <Link href={`/shop/${product.slug}`} className="flex h-full flex-col">
-        <div className="relative aspect-[4/5] overflow-hidden bg-muted">
-          <div className="image-fill h-full transition-transform duration-700 group-hover:scale-105" style={{ backgroundImage: `url(${product.image})` }} />
-          <div className="absolute top-1 left-1 flex h-10 w-20 flex-col items-center justify-center maroon-band text-white">
-            <p className="text-[10px] font-semibold uppercase tracking-[0.18em] leading-none">
-              Limited
-            </p>
-            <p className="mt-1 text-[10px] font-semibold uppercase tracking-[0.18em] leading-none">
-              Pieces
-            </p>
-          </div>
-        </div>
-        <div className="flex flex-1 flex-col p-5 pl-8">
-          <div className="mx-7 my-6">
-            <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-muted-foreground">
-              {product.collection}
-            </p>
-
-            <h3 className="mt-2 font-serif text-2xl text-primary">
-              {product.name}
-            </h3>
-
-            <p className="mt-2 text-sm leading-7 text-muted-foreground">
-              {product.short}
-            </p>
-            <div className="mt-8">
-              <span className="inline-flex flex-col items-start">
-                <span className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.14em] text-primary">
-                  Enquire on WhatsApp
-                  <MessageCircle className="h-4 w-4" />
-                </span>
-
-                <span className="mt-2 h-px w-full bg-primary" />
-              </span>
-            </div>
-          </div>
-
-        </div>
-      </Link>
-    </article>
-  )
-}
+import { ArrowRight } from "lucide-react"
+import { ProductGrid } from "@/components/storefront/product-grid"
+import { Reviews } from "@/components/sections/reviews"
+import { brand, journalPosts, story, trustPoints } from "@/lib/site-data"
 
 export default function HomePage() {
   return (
@@ -55,7 +11,7 @@ export default function HomePage() {
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/model-4.jpg')" }}
+          style={{ backgroundImage: "url('/images/background.jpeg')" }}
         />
 
         {/* Dark Overlay */}
@@ -138,11 +94,7 @@ export default function HomePage() {
             <div className="h-8 bg-background"></div>
 
           </div>
-          <div className="mt-12 grid gap-7 sm:grid-cols-2 lg:grid-cols-4">
-            {products.map((product) => (
-              <ProductCard key={product.slug} product={product} />
-            ))}
-          </div>
+          <div className="mt-12"><ProductGrid limit={4} /></div>
         </div>
       </section>
       <div className="h-8 bg-background"></div>
@@ -215,6 +167,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      <Reviews />
     </>
   )
 }

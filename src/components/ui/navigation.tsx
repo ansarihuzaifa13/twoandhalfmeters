@@ -8,6 +8,7 @@ import * as React from "react"
 import { NAVIGATION } from "@/lib/constants"
 import { brand } from "@/lib/site-data"
 import { cn } from "@/lib/utils"
+import Image from "next/image"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = React.useState(false)
@@ -29,7 +30,7 @@ export function Navigation() {
               className={cn(
                 "text-[11px] font-semibold uppercase tracking-[0.12em] text-muted-foreground transition-colors hover:text-primary",
                 (pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href))) &&
-                  "text-primary"
+                "text-primary"
               )}
             >
               {item.title}
@@ -45,13 +46,20 @@ export function Navigation() {
         >
           <Menu className="h-5 w-5" />
         </button>
-
-        <Link href="/" className="text-center text-primary">
-          <span className="block text-[13px] font-semibold uppercase tracking-[0.18em]">Two And Half</span>
-          <span className="brand-mark block text-5xl">2½</span>
-          <span className="block text-[13px] font-semibold uppercase tracking-[0.18em]">Meters</span>
+        <Link
+          href="/"
+          className="flex items-center justify-center"
+        >
+          
+          <Image
+            src="/images/logo.png"
+            alt="Two And Half Meters"
+            width={180}
+            height={90}
+            priority
+            className="h-20 w-auto"
+          />
         </Link>
-
         <div className="flex items-center justify-end gap-2 text-primary">
           {[Search, User, ShoppingBag].map((Icon, index) => (
             <button

@@ -1,5 +1,7 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: true,
@@ -7,9 +9,11 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
 
-  // Because you're deploying to GitHub Pages under a repository
-  basePath: "/twoandhalfmeters",
-  assetPrefix: "/twoandhalfmeters",
+  // Only use GitHub Pages settings in production builds
+  ...(isProd && {
+    basePath: "/twoandhalfmeters",
+    assetPrefix: "/twoandhalfmeters",
+  }),
 };
 
 export default nextConfig;

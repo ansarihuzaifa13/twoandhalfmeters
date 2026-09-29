@@ -12,7 +12,7 @@ export const brand = {
   tagline: "Handcrafted in India · Limited pieces · Timeless elegance",
   whatsapp: "+918425080250",
   phone: "+91 8425080250",
-  email: "hello@twoandhalfmeters.com",
+  email: "info@twoandhalfmeters.com",
   instagram: "@twoandhalfmeters",
   city: "India",
 }
@@ -138,9 +138,9 @@ export const story = {
   title: "Crafted with purpose. Made to last.",
   body: [
     "Two friends. Twenty-six years of friendship. A shared love for timeless craftsmanship inspired the creation of Two And Half Meters.",
-    "Founded by Debrina Naik and Rafiya Kulkarni, the brand celebrates traditional embroidery through thoughtfully curated handcrafted pieces.",
+    "Founded by Debrina Naik and Rafia Kulkarni, the brand celebrates traditional embroidery through thoughtfully curated handcrafted pieces.",
   ],
-  founders: ["Dabira Naik", "Rafiya Kulkarni"],
+  founders: ["Dabira Naik", "Rafia Kulkarni"],
   milestones: [
     { year: "1999", label: "Friendship begins" },
     { year: "2025", label: "Brand concept" },

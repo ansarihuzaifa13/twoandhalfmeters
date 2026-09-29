@@ -10,7 +10,7 @@ export const SITE_CONFIG = {
   },
   contact: {
     phone: "+91 8425080250",
-    email: "hello@twoandhalfmeters.com",
+    email: "info@twoandhalfmeters.com",
   },
 }
 
