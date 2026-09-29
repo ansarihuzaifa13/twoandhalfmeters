@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
+import { publicAsset } from "@/lib/utils"
 
 export function Hero() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -28,7 +29,7 @@ export function Hero() {
         <div
           className="w-full h-full bg-cover bg-center"
           style={{
-            backgroundImage: `url('/images/model-1.jpg')`,
+            backgroundImage: `url('${publicAsset("/images/model-1.jpg")}')`,
           }}
         />
         {/* Overlay Gradient */}

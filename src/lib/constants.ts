@@ -1,8 +1,10 @@
+import { publicAsset } from "@/lib/utils"
+
 export const SITE_CONFIG = {
   name: "Two And Half Meters",
   description: "Where Heritage Meets Luxury - Handcrafted custom clothing and artisanal jewelry",
   url: "https://twoandhalfmeters.com",
-  ogImage: "/images/og-image.jpg",
+  ogImage: publicAsset("/images/og-image.jpg"),
   links: {
     instagram: "https://instagram.com/twoandhalfmeters",
     facebook: "https://facebook.com/twoandhalfmeters",

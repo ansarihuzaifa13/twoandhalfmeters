@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react"
 import { ProductGrid } from "@/components/storefront/product-grid"
 import { Reviews } from "@/components/sections/reviews"
 import { brand, journalPosts, story, trustPoints } from "@/lib/site-data"
+import { publicAsset } from "@/lib/utils"
 
 export default function HomePage() {
   return (
@@ -11,7 +12,7 @@ export default function HomePage() {
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/background.jpeg')" }}
+          style={{ backgroundImage: `url('${publicAsset("/images/background.jpeg")}')` }}
         />
 
         {/* Dark Overlay */}
@@ -107,7 +108,7 @@ export default function HomePage() {
             <div
               className="h-[500px]  overflow-hidden shadow-sm"
               style={{
-                backgroundImage: "url('/images/model-3.jpg')",
+                backgroundImage: `url('${publicAsset("/images/model-3.jpg")}')`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}

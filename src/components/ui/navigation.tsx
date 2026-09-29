@@ -9,6 +9,7 @@ import { NAVIGATION } from "@/lib/constants"
 import { brand } from "@/lib/site-data"
 import { cn } from "@/lib/utils"
 import Image from "next/image"
+import { publicAsset } from "@/lib/utils"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = React.useState(false)
@@ -52,7 +53,7 @@ export function Navigation() {
         >
           
           <Image
-            src="/images/logo.png"
+            src={publicAsset("/images/logo.png")}
             alt="Two And Half Meters"
             width={180}
             height={90}

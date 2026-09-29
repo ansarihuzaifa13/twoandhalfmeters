@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { MessageSquare, Ruler, Scissors, Sparkles, Package, Heart } from "lucide-react"
 import Link from "next/link"
 import { FadeIn } from "@/components/animations/fade-in"
+import { publicAsset } from "@/lib/utils"
 
 const steps = [
   { icon: MessageSquare, title: "Consultation", duration: "30-60 mins", description: "We discuss your vision, preferences, and requirements." },
@@ -21,7 +22,7 @@ export default function CustomDesignPage() {
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center bg-fixed"
-          style={{ backgroundImage: "url('/images/model-2.jpg')" }}
+          style={{ backgroundImage: `url('${publicAsset("/images/model-2.jpg")}')` }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/40 to-background" />
         <div className="relative z-10 container px-4 sm:px-6 lg:px-8 text-center">

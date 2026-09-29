@@ -1,5 +1,6 @@
 import { Heart } from "lucide-react"
 import { story } from "@/lib/site-data"
+import { publicAsset } from "@/lib/utils"
 
 export default function AboutPage() {
   return (
@@ -29,7 +30,7 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-        <div className="image-fill min-h-[520px]" style={{ backgroundImage: "url('/images/model-2.jpg')" }} />
+        <div className="image-fill min-h-[520px]" style={{ backgroundImage: `url('${publicAsset("/images/model-2.jpg")}')` }} />
       </section>
       <div className="h-10 bg-background"></div>
 

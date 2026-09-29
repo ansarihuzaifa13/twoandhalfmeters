@@ -6,6 +6,7 @@ import {
   PackageCheck,
   Sparkles,
 } from "lucide-react"
+import { publicAsset } from "@/lib/utils"
 
 export const brand = {
   name: "Two And Half Meters",
@@ -58,8 +59,8 @@ export const products = [
     description:
       "A timeless handcrafted mukaish piece designed for elegant celebrations and cherished moments.",
     short: "Timeless shimmer in every detail.",
-    image: "/images/model-1.jpg",
-    gallery: ["/images/model-1.jpg", "/images/model-2.jpg", "/images/model-3.jpg"],
+    image: publicAsset("/images/model-1.jpg"),
+    gallery: [publicAsset("/images/model-1.jpg"), publicAsset("/images/model-2.jpg"), publicAsset("/images/model-3.jpg")],
     fabric: "Premium cotton",
     work: "Handcrafted mukaish",
     colour: "Ivory",
@@ -79,8 +80,8 @@ export const products = [
     description:
       "Graceful craftsmanship with an heirloom mood, made for slow celebrations and quiet refinement.",
     short: "Graceful craftsmanship. Made to be remembered.",
-    image: "/images/model-2.jpg",
-    gallery: ["/images/model-2.jpg", "/images/model-4.jpg", "/images/model-1.jpg"],
+    image: publicAsset("/images/model-2.jpg"),
+    gallery: [publicAsset("/images/model-2.jpg"), publicAsset("/images/model-4.jpg"), publicAsset("/images/model-1.jpg")],
     fabric: "Soft chanderi",
     work: "Mukaish and thread accents",
     colour: "Pearl ivory",
@@ -100,8 +101,8 @@ export const products = [
     description:
       "Subtle details and effortless grace come together in a versatile piece for festive days.",
     short: "Subtle details. Timeless beauty.",
-    image: "/images/model-3.jpg",
-    gallery: ["/images/model-3.jpg", "/images/model-1.jpg", "/images/model-4.jpg"],
+    image: publicAsset("/images/model-3.jpg"),
+    gallery: [publicAsset("/images/model-3.jpg"), publicAsset("/images/model-1.jpg"), publicAsset("/images/model-4.jpg")],
     fabric: "Cotton silk",
     work: "Hand mukaish highlights",
     colour: "Warm ivory",
@@ -121,8 +122,8 @@ export const products = [
     description:
       "Understated elegance with unmatched charm, crafted for moments that ask for restraint and radiance.",
     short: "Understated elegance. Unmatched charm.",
-    image: "/images/model-4.jpg",
-    gallery: ["/images/model-4.jpg", "/images/model-2.jpg", "/images/model-3.jpg"],
+    image: publicAsset("/images/model-4.jpg"),
+    gallery: [publicAsset("/images/model-4.jpg"), publicAsset("/images/model-2.jpg"), publicAsset("/images/model-3.jpg")],
     fabric: "Fine cotton",
     work: "Mukaish embroidery",
     colour: "Ivory blush",
@@ -153,25 +154,25 @@ export const journalPosts = [
     slug: "styling-ivory-mukaish",
     title: "Styling Ivory Mukaish for Day Celebrations",
     category: "Styling Guides",
-    image: "/images/model-1.jpg",
+    image: publicAsset("/images/model-1.jpg"),
   },
   {
     slug: "mukaish-craft-story",
     title: "The Quiet Beauty of Handcrafted Mukaish",
     category: "Craft Stories",
-    image: "/images/model-4.jpg",
+    image: publicAsset("/images/model-4.jpg"),
   },
   {
     slug: "festive-edit-notes",
     title: "Notes from the Festive Edit",
     category: "Festive Edit",
-    image: "/images/model-2.jpg",
+    image: publicAsset("/images/model-2.jpg"),
   },
   {
     slug: "fabric-care",
     title: "Caring for Handcrafted Fabrics",
     category: "Fabric Notes",
-    image: "/images/model-3.jpg",
+    image: publicAsset("/images/model-3.jpg"),
   },
 ]
 
